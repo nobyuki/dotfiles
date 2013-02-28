@@ -32,7 +32,7 @@
   lol = log --graph --decorate --abbrev-commit --pretty=oneline
   lola = log --graph --decorate --abbrev-commit --all --pretty=oneline
   loln = log --graph --decorate --abbrev-commit --pretty=oneline --name-status
-  lolna = log --graph --decorate --abbrev-commit --all --pretty=oneline --name-status
+  lolan = log --graph --decorate --abbrev-commit --all --pretty=oneline --name-status
   lp = log --graph --pretty=format:'%C(yellow)%h %C(blue)(%p)%C(red)%d %C(white bold)%s %C(green)%an %C(cyan)%ai'
   lpa = log --graph --all --pretty=format:'%C(yellow)%h %C(blue)(%p)%C(red)%d %C(white bold)%s %C(green)%an %C(cyan)%ai'
   l = log
