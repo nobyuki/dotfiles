@@ -42,12 +42,20 @@
   rss = reset --soft
   rsh = reset --hard
   rb = rebase
+  rbc = rebase --continue
+  rf = reflog
   h = help
   f = fetch
   c = config
   co = checkout
   cm = commit
+  cma = commit --amend
   s = show
   ss = status
   st = stash
-
+  g = grep
+  gt= grep --untracked
+  d = diff
+  dc = diff --cached
+  a = add
+  ap = add -p
