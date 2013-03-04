@@ -1,0 +1,97 @@
+" 1.2 (created: 2008/08/16 18:51:52)
+
+"+------------------------------
+" 基本設定
+"+------------------------------
+
+"メニューを表示
+"set guioptions+=mT
+
+"コマンド入力時にコマンド名を自動補完
+"set wildoptions=auto
+
+"ビープ音を鳴らさずビジュアルベルを使用
+set visualbell
+
+"ビジュアルベルを無効化
+"set visualbellstyle=display:none;
+
+"ヒントのスタイルを指定
+"set hintstyle=z-index:5000; font-family:monospace; font-size:12px; color:white; background-color:blue; border-color:ButtonShadow; border-width:0px; border-style:solid; padding:0px 1px 0px 1px; position:absolute;
+
+"ヒント(フォーカス時)のスタイルを
+"set focusedhintstyle=z-index:5000; font-family:monospace; font-size:12px; color:ButtonText; background-color:ButtonShadow; border-color:ButtonShadow; border-width:1px; border-style:solid; padding:0px 1px 0px 1px; position:
+
+
+
+"+------------------------------
+" Mappings
+"+------------------------------
+
+"yで選択範囲をコピー
+map y :echo 'Yank!'<CR>Y
+
+"j/kの移動量を5倍に
+map j 3<C-e>
+map k 3<C-y>
+
+"<BS>で「戻る」
+"map <BS> H
+
+"h/lでタブ移動
+map h <C-p>
+map l <C-n>
+
+"←/→でタブ移動
+map <Left> <C-p>
+map <Right> <C-n> 
+
+"<S-Left>/<S-Right>で現在のタブの位置変更
+map <S-Left>  :tabmove! -1<CR>
+map <S-Right> :tabmove! +1<CR>
+
+"コピー&ペーストなどOSのショートカットが効くように
+inoremap <C-a> <C-v><C-a>
+inoremap <C-z> <C-v><C-z>
+inoremap <C-x> <C-v><C-x>
+inoremap <C-c> <C-v><C-c>
+inoremap <C-v> <C-v><C-v>
+cnoremap <C-a> <C-v><C-a>
+cnoremap <C-z> <C-v><C-z>
+cnoremap <C-x> <C-v><C-x>
+cnoremap <C-c> <C-v><C-c>
+cnoremap <C-v> <C-v><C-v>
+
+
+
+
+" Options
+
+" Abbreviations
+
+"+------------------------------
+" 未プラグイン化スクリプト
+"+------------------------------
+
+"<C-c>で選択範囲のコピーと読み込みの中断
+"http://d.hatena.ne.jp/teramako/20071128/p2
+:javascript <<EOF
+mappings.addUserMap([modes.NORMAL,modes.VISUAL],['<C-c>'], 'Copy selected text or stop loading',
+  function(){
+    var sel = window.content.window.getSelection().toString();
+    if (sel){
+      util.copyToClipboard(sel,true);
+    } else {
+      BrowserStop();
+      liberator.echo('Stopped loading !');
+    }
+  },{
+    rhs: 'Copy selected text or stop loading'
+  }
+);
+EOF
+
+
+source! ~/.vimperatorrc.local
+
+" vim: set ft=vimperator:
