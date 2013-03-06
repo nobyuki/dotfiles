@@ -1,0 +1,14 @@
+# スタートアップページの非表示
+startup_message off
+
+defscrollback 100000
+
+escape ^z^z
+bind l windowlist
+
+screen -t memo
+screen -t file
+chdir $HOME
+screen
+
+hardstatus alwayslastline "screen: %w"
