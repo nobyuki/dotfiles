@@ -49,6 +49,7 @@
   f = fetch
   c = config
   co = checkout
+  cp = cherry-pick
   cm = commit
   cma = commit --amend
   s = show
