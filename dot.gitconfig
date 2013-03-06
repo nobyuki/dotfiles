@@ -55,6 +55,9 @@
   ss = status
   st = stash
   sb = show-branch
+  sm = submodule
+  sms = submodule sync
+  smu = submodule update --init --recursive
   g = grep
   gt= grep --untracked
   d = diff
