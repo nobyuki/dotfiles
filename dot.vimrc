@@ -7,7 +7,10 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 " let NeoBundle manage NeoBundle
 " required!
 NeoBundleFetch 'Shougo/neobundle.vim'
-" recommended to install
+" vimproc の clone 後、以下のコマンドを実行する必要がある。
+" $ cd $HOME/.vim/bundle/vimproc
+" $ make -f make_mac.mak
+" $ ln -s $HOME/.vim/bundle/vimproc/autoload/proc.so $HOME/.vim/autoload
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/unite.vim'
