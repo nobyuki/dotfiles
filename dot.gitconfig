@@ -65,3 +65,5 @@
   dc = diff --cached
   a = add
   ap = add -p
+[diff]
+  noprefix = true
