@@ -42,6 +42,7 @@
   rss = reset --soft
   rsh = reset --hard
   rb = rebase
+  rbi = rebase -i
   rbc = rebase --continue
   rf = reflog
   rp = rev-parse
