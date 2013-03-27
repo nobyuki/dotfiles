@@ -18,6 +18,7 @@ NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'rails.vim'
+NeoBundle 'kchmck/vim-coffee-script'
 
 filetype plugin indent on
 let g:Aline_xstrlen = 3
