@@ -22,11 +22,7 @@ export LV="-c -l"
 alias sudo='sudo env PATH=$PATH'
 
 # rbenv
-if which brew > /dev/null; then
-  export RBENV_ROOT=/usr/local/opt/rbenv
-else
-  export RBENV_ROOT="$HOME/.rbenv/"
-fi
+export RBENV_ROOT="$HOME/.rbenv/"
 export PATH="$RBENV_ROOT/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
