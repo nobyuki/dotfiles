@@ -66,5 +66,6 @@
   dc = diff --cached
   a = add
   ap = add -p
+  bl = blame --abbrev=6
 [diff]
   noprefix = true
